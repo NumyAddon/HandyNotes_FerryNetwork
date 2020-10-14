@@ -1,4 +1,4 @@
-## Interface: 80300
+## Interface: 90001
 ## Title: HandyNotes_FerryNetwork
 ## Version: @project-version@
 ## Notes: HandyNotes plugin for Alliance players which shows Ferry Master Network 'flight' path locations on the world map
@@ -8,5 +8,5 @@
 ## X-Embeds: Ace3
 ## SavedVariables: HandyNotes_FerryNetworkDB
 
-embeds.xml
+libs\embeds.xml
 HandyNotes_FerryNetwork.lua
