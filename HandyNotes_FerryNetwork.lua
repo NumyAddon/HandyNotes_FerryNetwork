@@ -108,7 +108,7 @@ local dropdownMenu = CreateFrame('Frame')
 dropdownMenu.displayMode = 'MENU'
 dropdownMenu.initialize = generateMenu
 
-function IsFerryMapOpen()
+local function IsFerryMapOpen()
     local uiMapId = WorldMapFrame:GetMapID()
     if(not uiMapId) then
         return false
