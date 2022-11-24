@@ -4,7 +4,7 @@ if faction ~= 'Alliance' then
     return
 end
 
-local HandyNotes_FerryNetwork = LibStub('AceAddon-3.0'):NewAddon('HandyNotes_FerryNetwork')
+local HandyNotes_FerryNetwork = LibStub('AceAddon-3.0'):NewAddon('HandyNotes_FerryNetwork', 'AceEvent-3.0')
 
 local HandyNotes = LibStub('AceAddon-3.0'):GetAddon('HandyNotes', true)
 if not HandyNotes then return end
