@@ -218,7 +218,7 @@ function HandyNotes_FerryNetwork:OnInitialize()
     }
     db = LibStub('AceDB-3.0'):New('HandyNotes_FerryNetworkDB', defaults, true).profile
 
-    if (IsAddOnLoaded('TomTom')) then
+    if (C_AddOns.IsAddOnLoaded('TomTom')) then
         isTomTomLoaded = true
     end
     HandyNotes:RegisterPluginDB('HandyNotes_FerryNetwork', self, options)
