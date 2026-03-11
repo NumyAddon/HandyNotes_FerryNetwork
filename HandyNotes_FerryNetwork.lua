@@ -4,7 +4,7 @@ if faction ~= 'Alliance' then
     return
 end
 
-local HandyNotes_FerryNetwork = LibStub('AceAddon-3.0'):NewAddon('HandyNotes_FerryNetwork', 'AceEvent-3.0')
+local HandyNotes_FerryNetwork = LibStub('AceAddon-3.0'):NewAddon('HandyNotes_FerryNetwork')
 
 local HandyNotes = LibStub('AceAddon-3.0'):GetAddon('HandyNotes', true)
 if not HandyNotes then return end
@@ -110,12 +110,12 @@ dropdownMenu.initialize = generateMenu
 
 local function IsFerryMapOpen()
     local uiMapId = WorldMapFrame:GetMapID()
-    if(not uiMapId) then
+    if (not uiMapId) then
         return false
     end
 
     for _, TaxiNodeInfo in pairs(C_TaxiMap.GetAllTaxiNodes(uiMapId)) do
-        if(TaxiNodeInfo.state == 0) then -- current taxi node
+        if (TaxiNodeInfo.state == 0) then -- current taxi node
             return (TaxiNodeInfo.textureKitPrefix == 'FlightMaster_Ferry')
         end
     end
@@ -134,7 +134,7 @@ function HandyNotes_FerryNetwork:OnEnter(mapFile, coord)
     if (not nodes[mapFile][coord]) then return end
 
     local tooltip = GameTooltip
-    if ( self:GetCenter() > UIParent:GetCenter() ) then
+    if (self:GetCenter() > UIParent:GetCenter()) then
         tooltip:SetOwner(self, 'ANCHOR_LEFT')
     else
         tooltip:SetOwner(self, 'ANCHOR_RIGHT')
